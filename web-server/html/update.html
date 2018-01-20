@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="ss/add.css"/>
+		 <script src="ss/update.js"></script> 
+	</head>
+	<body>
+		<div id="box">
+			<label><b>姓名：</b><input type="text" placeholder="请输入姓名" value="{{stu.name}}" /></label><br />
+			<label><b>年龄：</b><input type="text" placeholder="请输入年龄" value="{{stu.age}}" /></label><br />
+			<label><b>性别：</b><input type="text" placeholder="请输入性别" value="{{stu.sex}}" /></label><br />
+			<label><b>身高：</b><input type="text" placeholder="请输入身高" value="{{stu.height}}" /></label><br />
+			<label><b>出生年月：</b><input type="text" placeholder="请输入出生年月" value="{{stu.year}}" /></label><br />
+			<label><b>爱好：</b><input type="text" placeholder="请输入爱好，多个爱好用逗号隔开" value="{{stu.like}}" /></label><br />
+			<button url="{{stu._id.toString()}}">修改</button>
+		</div>
+	</body>
+</html>

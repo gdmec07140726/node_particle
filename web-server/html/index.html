@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="ss/index.css"/>
+	</head>
+	<body>
+		<h1>首页</h1>
+		
+		<div id="box">
+			<table cellspacing="0" border="1" align="center">
+				<tr>
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>性别</th>
+					<th>身高</th>
+					<th>出生年月</th>
+					<th>爱好</th>
+					<th>操作</th>
+				</tr>
+				{% for info in infoList %}
+				<tr>
+					<td>{{info.name}}</td>
+					<td>{{info.age}}</td>
+					<td>{{info.sex}}</td>
+					<td>{{info.height}}</td>
+					<td>{{info.year}}</td>
+					<td>{{info.like}}</td>
+					<td>
+						<a href="/update?id={{info._id.toString()}}">修改</a>
+						<a href="/remove?id={{info._id.toString()}}">删除</a>
+					</td>
+				</tr>
+				{% endfor %}
+			</table>
+			
+			{% if showPage %}
+			<div class="page">
+				<a class="prev" {% if prev!='' %} href="/findByPage?page={{prev}}&count={{count}}" {% endif %} >上一页</a>
+				{% for n in pageArr %}
+				<a href="/findByPage?page={{n.i}}&count={{count}}" {% if n.active!="" %} class="{{n.active}}" {% endif %} >{{n.i}}</a>
+				{% endfor %}
+				<a class="next" {% if next!='' %} href="/findByPage?page={{next}}&count={{count}}" {% endif %} >下一页</a>
+			</div>
+			{% endif %}
+			
+			<div class="add">
+				<a href="./add">增加学生成绩</a>
+			</div>
+			
+			
+		</div>
+		
+	</body>
+</html>

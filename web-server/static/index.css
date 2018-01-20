@@ -1,0 +1,46 @@
+#box{
+	width: 750px; margin: 0 auto;
+	padding: 20px 0; background: #ccc;
+}
+table{
+	text-align: center; border-color: #ddd; line-height: 25px;
+}
+th{
+	color: red;
+}
+td{
+	width: 100px;
+}
+
+
+
+.page{
+	margin: 20px 0; padding: 0;
+	height: 25px; text-align: center;
+}
+.page a{
+	display: inline-block; border: 1px solid #ddd;
+	width: 25px; height: 25px; text-align: center;
+	line-height: 25px; color: #000; font-size: 14px;
+	text-decoration: none; cursor: pointer;
+}
+.page .prev, .page .next{
+	width: auto; padding: 0 5px;
+}
+.page a:hover{
+	background: #ddd;
+}
+.page a.active{
+	background: #ddd;
+}
+
+
+.add{
+	overflow: hidden; margin-top: 20px;
+}
+.add a{
+	cursor: pointer; display: block; width: 120px; height: 30px;
+	margin-right: 30px; float: right; background: yellowgreen;
+	text-align: center; line-height: 30px; font-size: 14px;
+	border-radius: 5px; text-decoration: none; color: #000;
+}
